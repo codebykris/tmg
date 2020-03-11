@@ -11,7 +11,7 @@
 * TO-DO: Setup a CONSTANTS file, containing key/val pairs for repeatedly used generic strings such as error or warning messages, button labels, component headings etc.
 * TO-DO: Potentially setup internationalisation (i18n) library / framework (possibly already an existing AEM feature), allowing for translation of strings by TG Editorial staff for international users/readers, into their native languages
 * TO-DO: Potentially make use of Typescript as a way of stricter control over types within data structures, passed asynchronously  
-* TO-DO: Remove and console logging and unneeded comments across all code
+* TO-DO: Remove any console logging and unneeded comments across all code
 * TO-DO: Make request.js (Util) code dynamic (as opposed to static) to allow for other endpoint paths to be passed for API requests, bypassing the use of a constructor. Also utilise async/await prefix on methods invoked for Axios GET requests. NOTE: This Utility is not currently in use.
 * TO-DO: Display appropriate messaging in Comments component if no comment data (or if an error) is returned from API request, such as “There are currently no comments on this post” etc.
 * TO-DO: Re-name “Comments” component to “Comments Block” due to the introduction of Comment as a child / sub-component of Comments Block (at least stylistically)
