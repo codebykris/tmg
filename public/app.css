@@ -1,0 +1,200 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+	v2.0 | 20110126
+	License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote::before, blockquote::after,
+q::before, q::after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.grid,
+.main,
+.sidebar-l,
+.sidebar-r {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.grid {
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  grid-template-columns: repeat(1,1fr);
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.main {
+  grid-column: 3 / 10;
+  grid-row: 1;
+}
+
+.sidebar-l {
+  grid-column: 1 / 2;
+  grid-row: 1;
+}
+
+.sidebar-r {
+  grid-column: 10 / 12;
+  grid-row: 1;
+}
+
+@media screen and (min-width: 576px) {
+  .grid {
+    grid-template-columns: repeat(12,1fr);
+  }
+}
+
+.site-logo {
+	height: 48px;
+	padding: 1rem 0;
+	width: 285px;
+}
+
+.header {
+  padding: 1rem;
+}
+
+/* Comments Block component styles - 
+TO-DO: needs renaming to Comments Block from Comments, as naming convention too vague 
+*/
+
+.comments__header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  grid-auto-rows: minmax(1rem, auto);
+  padding: 2rem 0;
+  border: solid #eee;
+  border-width: 0.1rem 0;
+  margin: 1rem 0 0;
+}
+
+.comments__heading {
+  grid-column: 1 / 4;
+  grid-row: 1;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: serif;
+}
+
+.comments__filters {
+  grid-column: 4 / 4;
+  grid-row: 1;
+  font-size: 1.1rem;
+  font-family: sans-serif;
+  margin: 0.2rem;
+}
+
+.comments__filters > a {
+  border: 0.1rem solid;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  margin: 0 0 0 1rem;
+  cursor: pointer;
+}
+
+.comments__filters > a:hover,
+.comments__filters > a:active {
+  border-color: #000;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Comment sub-component styles
+TO-DO: to be abstracted out into separate sub-component specific styles 
+*/
+
+.comment__item {
+  padding: 1rem 0;
+  border: solid #eee;
+  border-width: 0 0 0.1rem 0;
+}
+
+.comment__name {
+  font-size: 1.35rem;
+  font-weight: 600;
+  font-family: serif;
+  margin-right: 1rem;
+}
+
+.comment__date {
+  font-family: sans-serif;
+  color: #777;
+}
+
+.comment__data {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  grid-auto-rows: minmax(1rem, auto);
+}
+
+.comment__data-left {
+  grid-column: 1 / 4;
+  grid-row: 1;
+}
+
+.comment__data-right {
+  grid-column: 4 / 4;
+  grid-row: 1;
+}
+
+.comment__likes {
+  font-weight: 500;
+  font-family: sans-serif;
+}
+
+.comment__body {
+  font-size: 1.15rem;
+  font-weight: 100;
+  font-family: sans-serif;
+  line-height: 1.5rem;
+  margin: 1.25rem 0 0;
+}
